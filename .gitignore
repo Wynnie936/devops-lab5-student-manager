@@ -3,3 +3,18 @@ __pycache__/
 .env
 .vscode/
 *.log
+
+# --- File private / bí mật (không bao giờ commit) ---
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+credentials.json
+config.local.*
+
+# --- Môi trường ảo & build ---
+venv/
+.venv/
+dist/
+build/
