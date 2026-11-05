@@ -4,10 +4,12 @@ Module: Main Application
 """
 from student import Student
 
+__version__ = "1.1.0"
+
 
 def main():
     print("=" * 50)
-    print("STUDENT MANAGER — DevOps Lab 5")
+    print(f"STUDENT MANAGER — DevOps Lab 5 (v{__version__})")
     print("=" * 50)
 
     students = [
