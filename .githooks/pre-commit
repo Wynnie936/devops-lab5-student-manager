@@ -13,7 +13,8 @@ fi
 
 fail=0
 for f in $files; do
-  if ! "$PY" -m py_compile "$f"; then
+  # Kiểm tra đúng nội dung đã staged (git show :file), không ghi file .pyc
+  if ! git show ":$f" | "$PY" -c "import sys; compile(sys.stdin.buffer.read(), sys.argv[1], 'exec')" "$f"; then
     echo "❌ Lỗi cú pháp Python: $f" >&2
     fail=1
   fi
