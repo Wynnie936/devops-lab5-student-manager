@@ -1,0 +1,3 @@
+# Hook script phải giữ LF để chạy được trên Linux/macOS
+.githooks/* text eol=lf
+*.sh text eol=lf
